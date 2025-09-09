@@ -86,3 +86,101 @@ The Turing Test asks whether a machine can engage in conversations indistinguish
 The worth of AI assistants isn't in pretending to be human, but in what they can help you accomplish. Today's LLMs are designed to be obviously helpful AI tools rather than human impersonators.
 
 **Maybe one day AI will pass the test completely - but the question is: should that be the goal?**
+
+## Advanced AI Concepts for Beginners
+
+### RAG (Retrieval-Augmented Generation)
+
+Think of RAG like giving an AI assistant a **really good filing cabinet** full of your team's knowledge.
+
+#### The Simple Explanation:
+
+- **Without RAG**: AI only knows what it learned during training (like a student taking a test from memory)
+- **With RAG**: AI can "look up" relevant information from your documents before answering (like a student with access to textbooks during the test)
+
+#### How It Works:
+
+1. Your documents get stored in a searchable database
+2. When you ask a question, the system finds relevant documents
+3. Those documents get included in the AI's prompt as "context"
+4. AI answers using both its training AND your specific information
+
+#### RAG vs Training a Custom Model:
+
+| Aspect          | RAG                | Custom Training          |
+| --------------- | ------------------ | ------------------------ |
+| **Cost**        | Low (just storage) | High (expensive compute) |
+| **Speed**       | Hours to set up    | Weeks/months             |
+| **Updates**     | Add docs instantly | Retrain entire model     |
+| **Maintenance** | Easy               | Complex                  |
+
+**Real Example:**
+
+- **You ask**: "How do we deploy to staging?"
+- **RAG finds**: Your team's deployment guide, K8s configs, runbooks
+- **AI responds**: Step-by-step instructions using YOUR team's actual processes
+
+### MCP (Model Context Protocol)
+
+Think of MCP like giving your AI assistant **hands and tools** to actually do things, not just talk about them.
+
+#### The Simple Explanation:
+
+- **Without MCP**: AI can only chat and give advice
+- **With MCP**: AI can actually perform actions (create tickets, deploy code, manage cloud resources)
+
+#### What MCP Enables:
+
+- **Create Atlassian tickets** when problems can't be solved
+- **Deploy applications** to Kubernetes
+- **Manage cloud resources** (create ECR registries, add firewall rules)
+- **Query databases** and return real data
+- **Integrate with any API** your team uses
+
+#### MCP vs Regular Chatbots:
+
+| Capability      | Regular Chatbot                    | MCP-Enabled Bot                      |
+| --------------- | ---------------------------------- | ------------------------------------ |
+| **Advice**      | ✅ "Here's how to create a ticket" | ✅ "Here's how to create a ticket"   |
+| **Action**      | ❌ Can't actually do it            | ✅ "I've created the ticket for you" |
+| **Integration** | ❌ Isolated conversations          | ✅ Connected to your tools           |
+| **Workflow**    | ❌ Manual follow-up needed         | ✅ End-to-end automation             |
+
+**Real Example:**
+
+- **You say**: "My pod won't start in staging"
+- **Bot troubleshoots**: Checks logs, identifies the issue
+- **If it can't fix it**: Creates a ticket in your kanban board automatically
+- **Ticket includes**: Full conversation context, error logs, attempted solutions
+
+### Why This Matters for Teams
+
+#### RAG Makes AI Smarter About YOUR Stuff
+
+- Knows your coding patterns, not just generic examples
+- References your actual documentation, not outdated tutorials
+- Understands your team's specific processes and tools
+
+#### MCP Makes AI Actually Useful
+
+- Reduces context switching between chat and tools
+- Automates routine tasks end-to-end
+- Ensures nothing falls through the cracks
+
+### The Power Combination: RAG + MCP
+
+When you combine both:
+
+1. **RAG** gives the AI deep knowledge of your team's practices
+2. **MCP** gives the AI the ability to act on that knowledge
+3. **Result**: An AI assistant that truly understands your workflow AND can help execute it
+
+**Example Workflow:**
+
+1. "How do I set up monitoring for my new service?"
+2. **RAG retrieves**: Your monitoring setup guides and examples
+3. **AI explains**: Step-by-step process using your team's tools
+4. **MCP executes**: Actually creates the monitoring dashboards and alerts
+5. **If issues arise**: Automatically creates tickets with full context
+
+This is how modern AI assistants become true **team members** rather than just **search engines with personality**.

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The NinjaBot is an intelligent chatbot service designed for the Cloud Ninja Team to streamline development workflows, enhance productivity, and provide intelligent assistance for cloud infrastructure management. The bot will integrate with existing team tools (Atlassian, BitBucket, Kubernetes/ArgoCD) and leverage document ingestion capabilities to provide contextual recommendations and automate routine tasks.
+The NinjaBot is an intelligent chatbot service designed for the Cloud Ninja Team to streamline development workflows, enhance productivity, and provide intelligent assistance for cloud infrastructure management. The bot will integrate with existing team tools (Atlassian, BitBucket, Kubernetes/ArgoCD) and leverage document ingestion capabilities to provide contextual recommendations and automate routine tasks. (470 tickets !!!)
 
 ## Requirements
 
